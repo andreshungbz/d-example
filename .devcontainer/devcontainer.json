@@ -1,0 +1,38 @@
+{
+  "name": "D Development Environment",
+  "build": {
+    "dockerfile": "Dockerfile"
+  },
+  
+  // Features to add to the dev container. More info: https://containers.dev/features.
+  "features": {
+    "ghcr.io/devcontainers/features/git:1": {}
+  },
+
+  // Configure tool-specific properties.
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "webfreak.code-d",
+        "webfreak.serve-d",
+        "ms-vscode.vscode-json"
+      ],
+      "settings": {
+        "d.dcdClientPath": "/usr/local/bin/dcd-client",
+        "d.dcdServerPath": "/usr/local/bin/dcd-server",
+        "d.dubPath": "/usr/local/bin/dub",
+        "d.dmdPath": "/usr/local/bin/dmd",
+        "d.ldcPath": "/usr/local/bin/ldc2"
+      }
+    }
+  },
+
+  // Use 'forwardPorts' to make a list of ports inside the container available locally.
+  // "forwardPorts": [],
+
+  // Use 'postCreateCommand' to run commands after the container is created.
+  "postCreateCommand": "dmd --version && dub --version",
+
+  // Configure container user
+  "remoteUser": "vscode"
+}
