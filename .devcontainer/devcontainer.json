@@ -3,13 +3,9 @@
   "build": {
     "dockerfile": "Dockerfile"
   },
-  
-  // Features to add to the dev container. More info: https://containers.dev/features.
   "features": {
     "ghcr.io/devcontainers/features/git:1": {}
   },
-
-  // Configure tool-specific properties.
   "customizations": {
     "vscode": {
       "extensions": [
@@ -26,13 +22,6 @@
       }
     }
   },
-
-  // Use 'forwardPorts' to make a list of ports inside the container available locally.
-  // "forwardPorts": [],
-
-  // Use 'postCreateCommand' to run commands after the container is created.
   "postCreateCommand": "dmd --version && dub --version",
-
-  // Configure container user
   "remoteUser": "vscode"
 }
