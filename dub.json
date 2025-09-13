@@ -1,0 +1,17 @@
+{
+    "name": "d-example",
+    "description": "Example program in the D programming language",
+    "authors": ["andreshungbz"],
+    "copyright": "Copyright © 2024, andreshungbz",
+    "license": "MIT",
+    "targetType": "executable",
+    "mainSourceFile": "source/app.d",
+    "buildTypes": {
+        "debug": {
+            "buildOptions": ["debugMode", "debugInfo"]
+        },
+        "release": {
+            "buildOptions": ["releaseMode", "optimize", "inline"]
+        }
+    }
+}

@@ -1,0 +1,16 @@
+{
+    "files.eol": "\n",
+    "files.insertFinalNewline": true,
+    "files.trimTrailingWhitespace": true,
+    "editor.tabSize": 4,
+    "editor.insertSpaces": true,
+    "editor.detectIndentation": false,
+    "d.enableLinting": true,
+    "d.enableAutoComplete": true,
+    "d.enableFormatting": true,
+    "d.enableStaticLinting": true,
+    "d.stdlibPath": "auto",
+    "editor.rulers": [80, 120],
+    "editor.wordWrap": "bounded",
+    "editor.wordWrapColumn": 120
+}

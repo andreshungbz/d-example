@@ -1,0 +1,27 @@
+{
+  "name": "D Development Environment",
+  "build": {
+    "dockerfile": "Dockerfile"
+  },
+  "features": {
+    "ghcr.io/devcontainers/features/git:1": {}
+  },
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "webfreak.code-d",
+        "webfreak.serve-d",
+        "ms-vscode.vscode-json"
+      ],
+      "settings": {
+        "d.dcdClientPath": "/usr/local/bin/dcd-client",
+        "d.dcdServerPath": "/usr/local/bin/dcd-server",
+        "d.dubPath": "/usr/local/bin/dub",
+        "d.dmdPath": "/usr/local/bin/dmd",
+        "d.ldcPath": "/usr/local/bin/ldc2"
+      }
+    }
+  },
+  "postCreateCommand": "dmd --version && dub --version",
+  "remoteUser": "vscode"
+}
